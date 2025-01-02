@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --primary : #fff;
+    --secondary : #34b614;
+    --bg-color : #1c1c1c;
+    --color : #ff3700;
+    --color1 : brown;
+    --font-sapce-grotek : "Space Grotesk", serif;
+    --font-plus-jakarta-sans : "Plus Jakarta Sans", serif;
+    --font-Inter : "Inter", serif;
+    --font-sora : "Sora", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: var(--font-Inter);
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--bg-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 7%;
+    background-color: var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;    
+    right: 0;
+    z-index: 9999; 
+    /* z-index: 9999; untuk tidak ada elemen lain yang mengalahkan tumpukannya   */
+}
+
+.navbar-logo{
+    font-size: 1.5rem;
+    font-family: var(--font-plus-jakarta-sans);
+    align-items: center;
+    display: flex;
+    color: var(--bg-color);
+    font-weight: bold;
+}
+
+.navbar .navbar-logo img {
+    height: 30px;
+    padding: 0 0.5rem;
+}
+
+.navbar .navbar-nav a {
+    color: var(--bg-color);
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--color);
+}
+
+.navbar .navbar-extra a{
+    color: var(--bg-color);
+    margin: 0 0.5rem ;
+    font-size: 1.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--color);
+}
+
+#hamburger-menu {
+    display: none;
+    column-rule: var(--bg-color);
+}
+
+/* hero */
+.hero {
+    display: flex;
+    min-height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: var(--font-sapce-grotek);
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-height: 80vh;
+}
+
+.hero .content h1 {
+    font-size: 5.5em;
+    line-height: 1em;
+    color: var(--primary);
+    font-family: var(--font-sora);
+    font-weight:600;
+    color: var(--primary);
+}
+
+.hero .content h4 {
+    font-size: 2.5rem;
+    font-weight:500;
+    font-family: var(--font-sora) ;
+    color: var(--primary);
+}
+
+.hero .content p {
+    font-size: 1.4rem;
+    color: var(--primary);
+    font-weight: 500;
+    max-width: 60vh ;
+    line-height: 2rem;
+}
+
+.hero .content .btn {
+    display: inline-block;
+    background-color: var(--bg-color);
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: .5rem;
+    padding: .6rem 2rem;
+    border-radius: .5rem;
+    transition: .2s linear;
+}
+
+.content .btn:hover {
+    background-color: var(--color);
+    color: var(--bg-color);
+    transform: scale(1.05);
+}
+
+/* About */
+
+.about{
+    height: 90vh;
+    padding: 6rem 7% 1.4rem;
+    border-bottom: 2px solidb black;
+}
+.about h1 {
+    text-align: center;
+    padding: .5rem 2rem 2rem;
+    font-size: 2.6rem;
+}
+
+.about .row {
+    display: flex;
+    gap: 2rem;
+}
+
+.about .row .about-img {
+    flex: 1 1 50%;
+}
+
+.about .row .about-img img{
+    height: 25rem;
+    border-radius: 5px ;
+}
+
+.about .row .about-content {
+    display: block;
+    max-width: 100%;
+}
+
+.about .row .content-tile {
+    font-family: var(--font-plus-jakarta-sans);
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.about .row .about-description {
+    font-size: 1rem;
+    font-family: var(--font-sora);
+    padding-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* menu product */
+.product {
+    height: 200vh;
+    padding: 6rem 7% 1.4rem;
+}
+
+.product h2{
+    margin-bottom: .1rem;
+    text-align: center;
+    font-size: 2.6rem;
+    font-family: var(--font-sora);
+}
+
+.product .list {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-family: var(--font-plus-jakarta-sans);
+}
+
+.product .rows {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem ;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.product .rows .product-card {
+    padding: .5rem;
+    background-color:var(--primary);
+    border: 1px solid var(--bg-color);
+    border-radius: 10px;
+}
+
+.product .rows .product-card img {
+    height: 24vh;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product .rows .product-card h3 {
+    font-family: var(--font-plus-jakarta-sans);
+    font-size: 9px;
+    padding-bottom: 8px;
+}
+
+.product .rows .product-card .product-price {
+    font-size: 20px;
+    color: var(--color1);
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.product .rows .product-card .product-sale {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    padding-bottom: 5px;
+    font-family: var(--font-plus-jakarta-sans);
+}
+
+.product .rows .product-card .product-sale p {
+    font-size: 8px;
+}
+
+.product .rows .product-card .product-cta-btn {
+    display: grid;
+    text-align: center;
+    gap: 5px;
+}
+
+.product .rows .product-card .product-cta-btn a {
+    padding: 8px 1rem;
+    border-radius: 5px;
+    color: var(--primary);
+    background-color: var(--bg-color);
+    font-weight: 500;
+}
+
+.product .rows .product-card .product-cta-btn a:hover {
+    background-color: var(--color);
+    color: var(--primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsif */
+
+/* PC */
+@media (max-width: 1366px){
+    html {
+        font-size: 70%;
+    }
+}
+/* Tablet */
+
+@media (max-width: 768px){
+    html {
+        font-size: 68.5%;
+    }
+    #hamburger-menu {
+        display: inline-block;
+    }
+/* Sidebar */
+.navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 20rem;
+    height: 100vh;
+    transition: .2s linear;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+.navbar .navbar-nav.active {
+    right: 0;
+}
+
+.navbar .navbar-nav a {
+    display: block;
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+
+.about .row {
+    flex-wrap: wrap;
+}
+
+.about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    width: 100%;
+    object-position: center;
+}
+
+}
+/* Mobile phone */
+@media (max-width: 450px){
+    html {
+        font-size: 55%;
+    }
+
+   .hero .content h1 {
+        font-size: 4em;
+    }
+}
